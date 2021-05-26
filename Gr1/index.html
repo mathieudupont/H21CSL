@@ -2,33 +2,38 @@
 <html>
 
 <head>
-<title>Gr1</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<style>
-    h1, h2, h3, h4, h5 {
-        font-family: Helvetica, Calibri, sans-serif;
-        font-weight: bold;
-        letter-spacing: 0.3em;
-        text-align: center;
-    }
-    p {
-        font-family: Helvetica, Calibri, sans-serif;
-        text-align: center;
-        width: 90%;
-        margin-top: 0px;
-    }
-    .w3-hover-opacity {
-        width: 90%;
-        cursor: pointer;
-    }
-    .logo {
-        width: 20%;
-    }
-    .first {
-        clear: left;
-    }
-</style>
+    <title>Gr1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        h1, h2, h3, h4, h5 {
+            font-family: Helvetica, Calibri, sans-serif;
+            font-weight: bold;
+            letter-spacing: 0.3em;
+            text-align: center;
+        }
+        p {
+            font-family: Helvetica, Calibri, sans-serif;
+            text-align: center;
+            width: 90%;
+            margin-top: 0px;
+        }
+        #caption {
+            width: 100%;
+        }
+        .w3-hover-opacity {
+            width: 90%;
+            cursor: pointer;
+        }
+        .logo {
+            width: 20%;
+        }
+        .first {
+            clear: left;
+        }
+
+        .mySlides {display:none}
+    </style>
 </head>
 
 <body>
@@ -48,101 +53,116 @@
 
 <br>
 
-<div class="w3-row-padding">
+<div class="w3-container">
 
-    <div class="w3-container w3-quarter first">
-        <img src="img/1-1.png" onclick="onClick(this)" class="w3-hover-opacity w3-round">
-        <p>1-A</p>
+    <div class="w3-row-padding">
+        <div class="w3-container w3-quarter first"><img src="img/1-1.png" onclick="openModal();currentDiv(1)" class="w3-hover-opacity w3-round"><p>1-A</p></div>
+        <div class="w3-container w3-quarter"><img src="img/1-2.png" onclick="openModal();currentDiv(2)" class="w3-hover-opacity w3-round"><p>1-B</p></div>
+        <div class="w3-container w3-quarter"><img src="img/1-3.png" onclick="openModal();currentDiv(3)" class="w3-hover-opacity w3-round"><p>1-C</p></div>
+        <div class="w3-container w3-quarter"><img src="img/1-4.png" onclick="openModal();currentDiv(4)" class="w3-hover-opacity w3-round"><p>1-D</p></div>
+        <div class="w3-container w3-quarter first"><img src="img/1-5.png" onclick="openModal();currentDiv(5)" class="w3-hover-opacity w3-round"><p>1-E</p></div>
+        <div class="w3-container w3-quarter"><img src="img/1-6.png" onclick="openModal();currentDiv(6)" class="w3-hover-opacity w3-round"><p>1-F</p></div>
+        <div class="w3-container w3-quarter"><img src="img/1-7.png" onclick="openModal();currentDiv(7)" class="w3-hover-opacity w3-round"><p>1-G</p></div>
+        <div class="w3-container w3-quarter"><img src="img/1-8.png" onclick="openModal();currentDiv(8)" class="w3-hover-opacity w3-round"><p>1-H</p></div>
+        <div class="w3-container w3-quarter first"><img src="img/1-9.png" onclick="openModal();currentDiv(9)" class="w3-hover-opacity w3-round"><p>1-I</p></div>
+        <div class="w3-container w3-quarter"><img src="img/1-10.png" onclick="openModal();currentDiv(10)" class="w3-hover-opacity w3-round"><p>1-J</p></div>
+        <div class="w3-container w3-quarter"><img src="img/1-11.png" onclick="openModal();currentDiv(11)" class="w3-hover-opacity w3-round"><p>1-K</p></div>
+        <div class="w3-container w3-quarter"><img src="img/1-12.png" onclick="openModal();currentDiv(12)" class="w3-hover-opacity w3-round"><p>1-L</p></div>
+        <div class="w3-container w3-quarter first"><img src="img/1-13.png" onclick="openModal();currentDiv(13)" class="w3-hover-opacity w3-round"><p>1-M</p></div>
+        <div class="w3-container w3-quarter"><img src="img/1-14.png" onclick="openModal();currentDiv(14)" class="w3-hover-opacity w3-round"><p>1-N</p></div>
+        <div class="w3-container w3-quarter"><img src="img/1-15.png" onclick="openModal();currentDiv(15)" class="w3-hover-opacity w3-round"><p>1-O</p></div>
+        <div class="w3-container w3-quarter"><img src="img/1-16.png" onclick="openModal();currentDiv(16)" class="w3-hover-opacity w3-round"><p>1-P</p></div>
     </div>
 
-    <div class="w3-container w3-quarter">
-        <img src="img/1-2.png" onclick="onClick(this)" class="w3-hover-opacity w3-round">
-        <p>1-B</p>
-    </div>
+    <div id="myModal" class="w3-modal w3-black">
+        <span class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-topright" onclick="closeModal()" style="cursor:pointer">×</span>
+        <div class="w3-modal-content">
 
-    <div class="w3-container w3-quarter">
-        <img src="img/1-3.png" onclick="onClick(this)" class="w3-hover-opacity w3-round">
-        <p>1-C</p>
-    </div>
+            <div class="w3-content" style="max-width:1200px">
+                <img class="mySlides" src="img/1-1.png" style="width:100%">
+                <img class="mySlides" src="img/1-2.png" style="width:100%">
+                <img class="mySlides" src="img/1-3.png" style="width:100%">
+                <img class="mySlides" src="img/1-4.png" style="width:100%">
+                <img class="mySlides" src="img/1-5.png" style="width:100%">
+                <img class="mySlides" src="img/1-6.png" style="width:100%">
+                <img class="mySlides" src="img/1-7.png" style="width:100%">
+                <img class="mySlides" src="img/1-8.png" style="width:100%">
+                <img class="mySlides" src="img/1-9.png" style="width:100%">
+                <img class="mySlides" src="img/1-10.png" style="width:100%">
+                <img class="mySlides" src="img/1-11.png" style="width:100%">
+                <img class="mySlides" src="img/1-12.png" style="width:100%">
+                <img class="mySlides" src="img/1-13.png" style="width:100%">
+                <img class="mySlides" src="img/1-14.png" style="width:100%">
+                <img class="mySlides" src="img/1-15.png" style="width:100%">
+                <img class="mySlides" src="img/1-16.png" style="width:100%">
+                <div class="w3-row w3-black w3-center">
+                    <div class="w3-display-container">
+                        <p id="caption"></p>
+                        <span class="w3-display-left w3-btn" onclick="plusDivs(-1)">❮</span>
+                        <span class="w3-display-right w3-btn" onclick="plusDivs(1)">❯</span>
+                    </div>
+                    <div class="w3-col s4"><img class="demo w3-opacity w3-hover-opacity-off" src="img/1-1.png" style="width:100%" onclick="currentDiv(1)" alt="1-A"></div>
+                    <div class="w3-col s4"><img class="demo w3-opacity w3-hover-opacity-off" src="img/1-2.png" style="width:100%" onclick="currentDiv(2)" alt="1-B"></div>
+                    <div class="w3-col s4"><img class="demo w3-opacity w3-hover-opacity-off" src="img/1-3.png" style="width:100%" onclick="currentDiv(3)" alt="1-C"></div>
+                    <div class="w3-col s4"><img class="demo w3-opacity w3-hover-opacity-off" src="img/1-4.png" style="width:100%" onclick="currentDiv(4)" alt="1-D"></div>
+                    <div class="w3-col s4"><img class="demo w3-opacity w3-hover-opacity-off" src="img/1-5.png" style="width:100%" onclick="currentDiv(5)" alt="1-E"></div>
+                    <div class="w3-col s4"><img class="demo w3-opacity w3-hover-opacity-off" src="img/1-6.png" style="width:100%" onclick="currentDiv(6)" alt="1-F"></div>
+                    <div class="w3-col s4"><img class="demo w3-opacity w3-hover-opacity-off" src="img/1-7.png" style="width:100%" onclick="currentDiv(7)" alt="1-G"></div>
+                    <div class="w3-col s4"><img class="demo w3-opacity w3-hover-opacity-off" src="img/1-8.png" style="width:100%" onclick="currentDiv(8)" alt="1-H"></div>
+                    <div class="w3-col s4"><img class="demo w3-opacity w3-hover-opacity-off" src="img/1-9.png" style="width:100%" onclick="currentDiv(9)" alt="1-I"></div>
+                    <div class="w3-col s4"><img class="demo w3-opacity w3-hover-opacity-off" src="img/1-10.png" style="width:100%" onclick="currentDiv(10)" alt="1-J"></div>
+                    <div class="w3-col s4"><img class="demo w3-opacity w3-hover-opacity-off" src="img/1-11.png" style="width:100%" onclick="currentDiv(11)" alt="1-K"></div>
+                    <div class="w3-col s4"><img class="demo w3-opacity w3-hover-opacity-off" src="img/1-12.png" style="width:100%" onclick="currentDiv(12)" alt="1-L"></div>
+                    <div class="w3-col s4"><img class="demo w3-opacity w3-hover-opacity-off" src="img/1-13.png" style="width:100%" onclick="currentDiv(13)" alt="1-M"></div>
+                    <div class="w3-col s4"><img class="demo w3-opacity w3-hover-opacity-off" src="img/1-14.png" style="width:100%" onclick="currentDiv(14)" alt="1-N"></div>
+                    <div class="w3-col s4"><img class="demo w3-opacity w3-hover-opacity-off" src="img/1-15.png" style="width:100%" onclick="currentDiv(15)" alt="1-O"></div>
+                    <div class="w3-col s4"><img class="demo w3-opacity w3-hover-opacity-off" src="img/1-16.png" style="width:100%" onclick="currentDiv(16)" alt="1-P"></div>
+                </div> <!-- End row -->
+            </div> <!-- End w3-content -->
 
-    <div class="w3-container w3-quarter">
-        <img src="img/1-4.png" onclick="onClick(this)" class="w3-hover-opacity w3-round">
-        <p>1-D</p>
-    </div>
+        </div> <!-- End modal content -->
+    </div> <!-- End modal -->
 
-    <div class="w3-container w3-quarter first">
-        <img src="img/1-5.png" onclick="onClick(this)" class="w3-hover-opacity w3-round">
-        <p>1-E</p>
-    </div>
-
-    <div class="w3-container w3-quarter">
-        <img src="img/1-6.png" onclick="onClick(this)" class="w3-hover-opacity w3-round">
-        <p>1-F</p>
-    </div>
-
-    <div class="w3-container w3-quarter">
-        <img src="img/1-7.png" onclick="onClick(this)" class="w3-hover-opacity w3-round">
-        <p>1-G</p>
-    </div>
-
-    <div class="w3-container w3-quarter">
-        <img src="img/1-8.png" onclick="onClick(this)" class="w3-hover-opacity w3-round">
-        <p>1-H</p>
-    </div>
-
-    <div class="w3-container w3-quarter first">
-        <img src="img/1-9.png" onclick="onClick(this)" class="w3-hover-opacity w3-round">
-        <p>1-I</p>
-    </div>
-
-    <div class="w3-container w3-quarter">
-        <img src="img/1-10.png" onclick="onClick(this)" class="w3-hover-opacity w3-round">
-        <p>1-J</p>
-    </div>
-
-    <div class="w3-container w3-quarter">
-        <img src="img/1-11.png" onclick="onClick(this)" class="w3-hover-opacity w3-round">
-        <p>1-K</p>
-    </div>
-
-    <div class="w3-container w3-quarter">
-        <img src="img/1-12.png" onclick="onClick(this)" class="w3-hover-opacity w3-round">
-        <p>1-L</p>
-    </div>
-
-    <div class="w3-container w3-quarter first">
-        <img src="img/1-13.png" onclick="onClick(this)" class="w3-hover-opacity w3-round">
-        <p>1-M</p>
-    </div>
-
-    <div class="w3-container w3-quarter">
-        <img src="img/1-14.png" onclick="onClick(this)" class="w3-hover-opacity w3-round">
-        <p>1-N</p>
-    </div>
-
-    <div class="w3-container w3-quarter">
-        <img src="img/1-15.png" onclick="onClick(this)" class="w3-hover-opacity w3-round">
-        <p>1-O</p>
-    </div>
-
-    <div class="w3-container w3-quarter">
-        <img src="img/1-16.png" onclick="onClick(this)" class="w3-hover-opacity w3-round">
-        <p>1-P</p>
-    </div>
-</div>
-
-<div id="modal01" class="w3-modal" onclick="this.style.display='none'">
-    <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
-    <div class="w3-modal-content w3-animate-zoom">
-        <img id="img01" style="width:100%">
-    </div>
 </div>
 
 <script>
-    function onClick(element) {
-        document.getElementById("img01").src = element.src;
-        document.getElementById("modal01").style.display = "block";
+    function openModal() {
+        document.getElementById('myModal').style.display = "block";
+    }
+
+    function closeModal() {
+        document.getElementById('myModal').style.display = "none";
+    }
+
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+        showDivs(slideIndex += n);
+    }
+
+    function currentDiv(n) {
+        showDivs(slideIndex = n);
+    }
+
+    function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        var captionText = document.getElementById("caption");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+        }
+        x[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " w3-opacity-off";
+        captionText.innerHTML = dots[slideIndex-1].alt;
     }
 </script>
+
 </body>
 </html> 
